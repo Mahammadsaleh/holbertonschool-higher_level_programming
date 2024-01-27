@@ -1,5 +1,3 @@
+#!/usr/bin/python3
 def islower(c):
-    if (c.islower()):
-        return True
-    else:
-        return False
+    return ord(c) >= ord("a") and ord(c) <= ord("z")
