@@ -8,4 +8,4 @@ def uppercase(str):
             res += i
         elif i.isdigit() or i.isspace():
             res += i
-    print(res)
+    print("{}".format(res))
