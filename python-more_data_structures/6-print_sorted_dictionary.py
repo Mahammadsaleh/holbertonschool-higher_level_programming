@@ -4,4 +4,4 @@ def print_sorted_dictionary(a_dictionary):
     sorted_k.sort()
     sorted_dict = {i: a_dictionary[i] for i in sorted_k}
     for x in sorted_dict:
-        print ("{}: {}".format(x, sorted_dict[x]))
+        print("{}: {}".format(x, sorted_dict[x]))
