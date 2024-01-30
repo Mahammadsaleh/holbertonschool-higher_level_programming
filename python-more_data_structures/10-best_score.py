@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 def best_score(a_dictionary):
-    m = min(a_dictionary.values())
-    if m:
-        return m
+    if a_dictionary != None:
+        return max(a_dictionary)
     else:
         return None
