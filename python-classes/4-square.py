@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""documentation"""
+
 
 class Square:
     """Square class with private attribute size"""
