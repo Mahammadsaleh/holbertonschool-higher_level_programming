@@ -10,9 +10,10 @@ def text_indentation(text):
     counter = 0
     for i in range(len(text)):
         full += text[i]
-        if text[i] in '.?:' or i == len(text) - 1:
+        if text[i] in '.?:':
             print("{}".format(full.strip()), end='')
-            print("\n")
+            if i != len(text) - 1:
+                print("\n")
             full = ""
             counter += 1
     if counter == 0:
