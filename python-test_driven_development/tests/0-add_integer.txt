@@ -1,7 +1,7 @@
 >>> add_integer = __import__ ('0-add_integer').add_integer
 
 >>> add_integer(63, 23)
-186
+86
 
 >>> add_integer('sdd', 1)
 Traceback (most recent call last):
@@ -13,7 +13,7 @@ Traceback (most recent call last):
 ...
 TypeError: a must be an integer
 
->>> add_integer(float('hey'))
+>>> add_integer(float('inf'))
 Traceback (most recent call last):
 ...
 OverflowError: cannot convert float infinity to integer
