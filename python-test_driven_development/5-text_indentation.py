@@ -3,18 +3,9 @@
 
 
 def text_indentation(text):
-    """Text indentation"""
+    """func"""
     if not isinstance(text, str):
         raise TypeError("text must be a string")
-    full = ""
-    counter = 0
-    for i in range(len(text)):
-        full += text[i]
-        if text[i] in '.?:':
-            print("{}".format(full.strip()), end='')
-            if i != len(text) - 1 or text[i] not in '.?:':
-                print("\n")
-            full = ""
-            counter += 1
-    if counter == 0 or full:
-        print(full.strip(), end="")
+    for c in ".:?":
+        text = text.replace(c, c + "\n\n")
+    print("\n".join(s.strip() for s in text.split("\n")), end="")
