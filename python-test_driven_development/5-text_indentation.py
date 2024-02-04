@@ -16,5 +16,5 @@ def text_indentation(text):
                 print("\n")
             full = ""
             counter += 1
-    if counter == 0:
-        print(text.strip(), end="")
+    if counter == 0 or full:
+        print(full.strip(), end="")
