@@ -10,8 +10,8 @@ def text_indentation(text):
     counter = 0
     for i in range(len(text)):
         full += text[i]
-        if text[i] == '.' or text[i] == '?' or text[i] == ':':
-            if not counter == 0:
+        if text[i] == '.' or text[i] == '?' or text[i] == ':' or i == len(text) - 1:
+            if not counter == 0 and not i == len(text) - 1:
                 print("{}".format(full[1:]), end='')
             else:
                 print("{}".format(full), end='')
