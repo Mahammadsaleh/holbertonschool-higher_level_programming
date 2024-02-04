@@ -12,7 +12,7 @@ def text_indentation(text):
         full += text[i]
         if text[i] in '.?:':
             print("{}".format(full.strip()), end='')
-            if i != len(text) - 1:
+            if i != len(text) - 1 or text[i] not in '.?:':
                 print("\n")
             full = ""
             counter += 1
