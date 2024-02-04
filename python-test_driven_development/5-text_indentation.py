@@ -20,4 +20,4 @@ def text_indentation(text):
             full = ""
             counter += 1
     if counter == 0:
-        print(text)
+        print(text, end="")
