@@ -19,3 +19,5 @@ def text_indentation(text):
             print()
             full = ""
             counter += 1
+    if counter == 0:
+        print(text)
