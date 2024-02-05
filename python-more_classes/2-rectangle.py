@@ -35,6 +35,7 @@ class Rectangle:
     def area(self):
         """Find the Rectangle area"""
         return self.__height * self.__width
+
     def perimeter(self):
         if (self.__width == 0) or (self.__height == 0):
             return 0
