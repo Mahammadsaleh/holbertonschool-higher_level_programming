@@ -3,6 +3,8 @@ More comprehensive tests for the MyList class, including edge cases and common u
 Test appending elements and printing the original list:
 >>> MyList = __import__('1-my_list').MyList
 >>> my_list = MyList()
+>>> print(my_list)
+[]
 >>> my_list.append(5)
 >>> my_list.append(1)
 >>> my_list.append(4)
