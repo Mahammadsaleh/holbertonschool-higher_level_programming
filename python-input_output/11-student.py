@@ -18,6 +18,7 @@ class Student:
             return chosen
         else:
             return self.__dict__
+
     def reload_from_json(self, json):
         for key, value in json.items():
             setattr(self, key, value)
