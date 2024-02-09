@@ -3,6 +3,7 @@
 
 
 def pascal_triangle(n):
+    """doc"""
     if n <= 0:
         return []
     triangle = [[1]]
