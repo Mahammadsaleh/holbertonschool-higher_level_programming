@@ -6,6 +6,8 @@ def pascal_triangle(n):
     """doc"""
     if n <= 0:
         return []
+    if n == 1:
+        return [[1]]
     triangle = [[1]]
     new_add = [1, 1]
     triangle.append(new_add)
