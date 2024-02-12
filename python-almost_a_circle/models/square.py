@@ -12,15 +12,17 @@ class Square(Rectangle):
 
     @property
     def size(self):
-        return self.width  # Since width = height for a Square, we can return either
+        return self.width
 
     @size.setter
     def size(self, value):
-        # Since a Square's width and height are always equal, setting size should update both
         self.width = value
         self.height = value
+
     def __str__(self):
-        return "[Square] ({}) {}/{} - {}".format(self.id,
-                                                 self.x,
-                                                 self.y,
-                                                 self.width)
+
+        return "[Square] \
+    ({}) {}/{} - {}".format(self.id,
+                            self.x,
+                            self.y,
+                            self.width)
