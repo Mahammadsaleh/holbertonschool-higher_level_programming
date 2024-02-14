@@ -64,7 +64,7 @@ class Base:
         try:
             with open(file, mode="r") as f:
                 objts_list = cls.from_json_string(f.read())
-        except FileExistsError:
+        except FileNotFoundError:
             return []
 
         return [cls.create(**obj) for obj in objts_list]
