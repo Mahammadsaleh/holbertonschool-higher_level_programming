@@ -137,6 +137,13 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(len(rectangles), 1)
         self.assertEqual(rectangles[0].to_dictionary(), r.to_dictionary())
 
+    def tearDown(self):
+        """This method is called after each test"""
+
+        try:
+            os.remove("Rectangle.json")
+        except FileNotFoundError:
+            pass
 
 if __name__ == '__main__':
     unittest.main()
