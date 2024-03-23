@@ -21,10 +21,13 @@ if __name__ == "__main__":
                     WHERE states.name = %s\
                     ORDER BY cities.id ASC;", (state_name,))
     rows = cursor.fetchall()
-    for row in rows:
-        if row != rows[-1]:
-            print(row[0], end=", ")
-        else:
-            print(row[0])
+    if not rows:
+        print()
+    else:
+        for row in rows:
+            if row != rows[-1]:
+                print(row[0], end=", ")
+            else:
+                print(row[0])
     cursor.close()
     db.close()
