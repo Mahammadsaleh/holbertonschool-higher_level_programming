@@ -30,7 +30,7 @@ def main():
         print("Nothing")
     else:
         print("{}: {}".format(state.id, state.name))
-        
+
     session.close()
 
 
