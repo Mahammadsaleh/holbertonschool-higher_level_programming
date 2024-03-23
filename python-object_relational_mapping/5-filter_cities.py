@@ -22,6 +22,9 @@ if __name__ == "__main__":
                     ORDER BY cities.id ASC;", (state_name,))
     rows = cursor.fetchall()
     for row in rows:
-        print(row[0])
+        if row != rows[-1]:
+            print(row[0], end=", ")
+        else:
+            print(row[0])
     cursor.close()
     db.close()
