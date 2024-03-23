@@ -24,8 +24,6 @@ def main():
 
     Session = sessionmaker(bind=engine)
     session = Session()
-
-    
     new_state = State(name="Louisiana")
     session.add(new_state)
     session.commit()
