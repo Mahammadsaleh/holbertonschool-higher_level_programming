@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Start link class to table in database 
+"""
+Start link class to table in database
 """
 
 
@@ -7,6 +8,7 @@ from model_state import Base, State
 from sys import argv
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
+
 
 def main():
     if len(argv) != 4:
@@ -27,6 +29,7 @@ def main():
         print("{}: {}".format(state.id, state.name))
 
     session.close()
+
 
 if __name__ == "__main__":
     main()
