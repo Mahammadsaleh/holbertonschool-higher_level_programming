@@ -10,13 +10,12 @@ from sqlalchemy.orm import sessionmaker
 
 
 if __name__ == "__main__":
-    # Connect to the MySQL database
+
     engine = create_engine("mysql+mysqldb://{}:{}@localhost:3306/{}".format(
                            argv[1], argv[2], argv[3]),
                            pool_pre_ping=True)
-    # Create all tables defined by Base class
+
     Base.metadata.create_all(engine)
-    # Create a session for interacting with the database
     Session = sessionmaker(bind=engine)
     session = Session()
 
@@ -25,5 +24,4 @@ if __name__ == "__main__":
                      .order_by(City.id)):
         print(f"{instance[0]}: ({instance[1]}) {instance[2]}")
 
-    # Close the session to release resources
     session.close()
